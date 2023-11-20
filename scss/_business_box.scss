@@ -1,0 +1,379 @@
+#business_card_area{
+  width: 420px;
+  display: block;
+  margin: auto;
+  background-color: $whColor;
+  position: relative;
+  padding-bottom: 100px;
+  &::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    top: 0;
+    z-index: 1;
+    display: none;
+  }
+  .footer_area{
+    position: absolute;
+    bottom: 0px;
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.226);
+    border-radius: 50px 50px 0 0;
+    user-select: none;
+    p{
+      font-size: 1em;
+      font-weight: 500;
+      i{
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+  #popup_box_area{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    opacity: 0.9;
+    left: 0px;
+    top: 0px;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    #popup_box{
+      width: 70%;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+  }
+  .popup_box_area_active{
+    display: flex !important;
+  }
+  #popup_close_btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: #000;
+  }
+  #button_box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    ul{
+      width: 100%;
+      li{
+        list-style: none;
+        width: 50%;
+        display: block;
+        text-align: center;
+        float: left;
+        a{
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          display: block;
+          width: 100%;
+          img{
+            width: 40px;
+            padding: 6px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.507);
+            transition: all 0.5s;
+            margin: auto;
+            display: block;
+          }
+          span{
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: $txtColor;
+          }
+          &:hover {
+            img{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.business_card_area_active_popup{
+  &::after{
+    display: block !important;
+  }
+}
+
+
+// install pop yp box start
+#install_box{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 1;
+  .share_box_btn{
+    .share_btn{
+      font-size: 20px;
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border: none;
+      outline: none;
+      color: $whColor;
+      background-color: #02c965;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .install_box_btn{
+    .install_btn{
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      border-radius: 4px;
+      padding: 5px;
+      border: none;
+      outline: none;
+      background-color: #02c965;
+      color: $whColor;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+// install pop yp box end
+// install popup box instaruction
+.popup_box{
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  left: 10px;
+  top: 0px;
+  user-select: none;
+  z-index: -1;
+  .close_btn{
+    max-width: 420px;
+    margin: auto;
+    position: absolute;
+    max-width: 420px;
+    top: 0px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .popup_close_btn{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $whColor;
+    color: #000;
+    position: absolute;
+    right: -15px;
+    top: 0px;
+    box-shadow: 0 0 10px 0 #00000093;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      transform: scale(1.2);
+      background-color: red;
+      color: $whColor;
+    }
+  }
+  .install_popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    max-width: 420px;
+    margin: auto;
+    display: none;
+    min-height: 100%;
+    img{
+      height: 100% !important;
+    }
+  }
+  .active_install_popup{
+    display: block !important;
+  }
+}
+.active_popup_box{
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: rgba(0, 16, 37, 0.562);
+  z-index: 99;
+}
+// share me area start
+#share_me_box{
+  width: 100%;
+  background-color: $whColor;
+  padding: 30px 0px 0px 0px;
+  overflow: hidden;
+  .inner_share_me_box{
+    max-width: 420px;
+    margin: auto;
+  }
+  .title{
+    font-family: cursive;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+  h4{
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .image_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      max-width: 300px;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  .button_box{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    button, a{
+      padding: 8px 15px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #02c965;
+      color: $whColor;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+    a{
+      background-color: #286090;
+    }
+  }
+}
+// share me area end
+
+#contact_form_area{
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 20px;
+  margin-bottom: 50px;
+  form{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.288);
+    border-radius: 10px;
+    padding: 50px 20px;
+    background-color: $whColor;
+    overflow: hidden;
+    h2{
+      text-align: center;
+      color: $pColor;
+      margin-bottom: 50px;
+    }
+    label{
+      font-size: 17px;
+      font-weight: $fw_MD;
+      line-height: 1.3rem;
+      color: $txtColor;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 15px;
+      display: none;
+    }
+    input,textarea{
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border-radius: 3px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      font-weight: $fw_MD;
+      color: $txtColor;
+      letter-spacing: 0.6px;
+      margin-top: 5px;
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.144);
+      border-radius: 7px;
+      margin-top: 20px;
+      &::placeholder{
+        font-weight: $fw_SM;
+      }
+    }
+    textarea{
+      height: 100px;
+    }
+    button{
+      display: block;
+      padding: 15px 20px;
+      font-size: 17px;
+      font-weight: $fw_MD;
+      border: none;
+      border-radius: 8px;
+      background-color: $pColor;
+      color: $whColor;
+      margin: auto;
+      margin-top:30px;
+      cursor: pointer;
+      transition: all 0.5s;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      &:hover{
+        background: $txtColor;
+      }
+    }
+  }
+}

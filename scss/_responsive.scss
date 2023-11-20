@@ -1,0 +1,41 @@
+@media screen and (max-width: 1040px){
+  #business_card_area{
+    width: 100%;
+  }
+  #header_area .inner_header_area .header_logo_box {
+    height: 45%;
+  }
+  
+}
+@media screen and (min-width: 768px){
+  #header_area .inner_header_area .header_logo_box {
+    width: 200px;
+    height: auto;
+    z-index: 1;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+  
+}
+@media screen and (max-width: 768px){
+  #business_card_area{
+    width: 100%;
+  }
+  #header_area .inner_header_area .header_logo_box {
+    width: 160px;
+    height: 160px;
+    z-index: 1;
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+}
+@media screen and (max-width: 540px){
+  #business_card_area{
+    width: 100%;
+  }
+  #header_area .inner_header_area .header_logo_box {
+    height: 35%;
+  }
+}

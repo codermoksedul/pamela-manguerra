@@ -1,0 +1,41 @@
+#contact_area{
+  overflow: hidden;
+  .inner_contact_area{
+    padding: 50px 20px;
+    background-color: $whColor;
+    .contact_link_box{
+      li{
+        background-color: $whColor;
+        padding: 10px 15px;
+        margin: auto;
+        border-radius: 2px;
+        list-style: none;
+        font-size: 16px;
+        font-weight: 700;
+        transition: all 0.5s;
+        width: 95%;
+        label{
+          font-size: 18px;
+          display: block;
+          margin-bottom:7px;
+          color: rgba(0, 0, 0, 0.705);
+        }
+        a{
+          text-decoration: none;
+          color: #000;
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+          padding-bottom: 30px;
+          font-size: 17px;
+          &:hover {
+            color: $txtHover;
+          }
+        }
+        &:hover {
+          transform: translateY(-7px);
+        }
+      }
+    }
+  }
+}

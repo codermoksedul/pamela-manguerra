@@ -1,0 +1,119 @@
+#header_area {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+  .inner_header_area {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $mainBGColor;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px 0px 50px 50px;
+    border-bottom: 15px solid $mainBGColor;
+    margin-bottom: 10px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      background-color: $mainBGColor;
+      bottom: -10px;
+      left: 0px;
+      border-radius: 50px;
+      border-bottom: 10px solid $whColor;
+    }
+    .header_logo_box {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      padding-top: 20px;
+      position: relative;
+      overflow: hidden;
+      img {
+        border: 5px solid transparent;
+        overflow: hidden;
+        width: 90%;
+        margin-top: -20px;
+      }
+    }
+    .header_info {
+      text-align: center;
+      z-index: 1;
+      margin-top: 20px;
+      h1 {
+        color: $whColor;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 45px;
+      }
+      p {
+        color: $whColor;
+        font-size: 22px;
+        margin-top: 15px;
+        font-weight: 500;
+      }
+      h2 {
+        font-size: 15px;
+        color: $whColor;
+        margin-top: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+  #header_contact_icon {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      li {
+        list-style: none;
+        display: block;
+        width: 32%;
+        text-align: center;
+        a {
+          font-size: 30px;
+          border-radius: 100%;
+          box-shadow: rgb(0 0 0 / 37%) 0px 0px 20px 0px;
+          color: $mainBGColor;
+          width: 50px;
+          height: 50px;
+          background-color: $whColor;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          padding: 30px;
+          margin: auto;
+          transition: all 0.5s;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.summary_area {
+  text-align: center;
+  padding: 30px;
+  h2 {
+    margin-bottom: 20px;
+    color: $pColor;
+  }
+  p {
+    text-align: justify;
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
