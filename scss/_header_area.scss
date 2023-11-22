@@ -9,11 +9,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: $mainBGColor;
+    background: $pColor;
     background-position: center;
     background-size: cover;
     border-radius: 0px 0px 50px 50px;
-    border-bottom: 15px solid $mainBGColor;
+    border-bottom: 15px solid $pColor;
     margin-bottom: 10px;
     position: relative;
     &::after {
@@ -21,7 +21,7 @@
       position: absolute;
       width: 100%;
       height: 100px;
-      background-color: $mainBGColor;
+      background-color: $pColor;
       bottom: -10px;
       left: 0px;
       border-radius: 50px;
@@ -83,7 +83,7 @@
           font-size: 30px;
           border-radius: 100%;
           box-shadow: rgb(0 0 0 / 37%) 0px 0px 20px 0px;
-          color: $mainBGColor;
+          color: $pColor;
           width: 50px;
           height: 50px;
           background-color: $whColor;
